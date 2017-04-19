@@ -1,0 +1,14 @@
+[ghq]
+	root = /Users/numata/git
+
+[core]
+	excludesfile = ~/.gitignore
+[user]
+	name = swamp09
+	email = shu.numata@esm.co.jp
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --

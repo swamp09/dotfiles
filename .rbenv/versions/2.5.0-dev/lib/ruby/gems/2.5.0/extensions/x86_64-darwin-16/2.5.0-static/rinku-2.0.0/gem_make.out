@@ -1,0 +1,19 @@
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/rinku-2.0.0/ext/rinku
+/Users/numata/.rbenv/versions/2.5.0-dev/bin/ruby -r ./siteconf20170418-3420-vfle16.rb extconf.rb
+creating Makefile
+
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/rinku-2.0.0/ext/rinku
+make "DESTDIR=" clean
+
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/rinku-2.0.0/ext/rinku
+make "DESTDIR="
+compiling autolink.c
+compiling buffer.c
+compiling rinku.c
+compiling rinku_rb.c
+compiling utf8.c
+linking shared-object rinku.bundle
+
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/rinku-2.0.0/ext/rinku
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rinku.bundle ./.gem.20170418-3420-12t6cab

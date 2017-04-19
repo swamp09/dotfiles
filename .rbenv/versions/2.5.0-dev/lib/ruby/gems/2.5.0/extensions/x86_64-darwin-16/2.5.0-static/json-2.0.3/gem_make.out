@@ -1,0 +1,13 @@
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/json-2.0.3/ext/json
+/Users/numata/.rbenv/versions/2.5.0-dev/bin/ruby -r ./siteconf20170418-3420-1cu03xk.rb extconf.rb
+creating Makefile
+
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/json-2.0.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/json-2.0.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/numata/.rbenv/versions/2.5.0-dev/lib/ruby/gems/2.5.0/gems/json-2.0.3/ext/json
+make "DESTDIR=" install
