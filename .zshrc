@@ -38,3 +38,6 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
