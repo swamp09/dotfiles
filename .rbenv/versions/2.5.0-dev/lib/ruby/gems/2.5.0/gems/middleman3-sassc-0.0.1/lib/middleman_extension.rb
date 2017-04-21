@@ -1,1 +1,0 @@
-require 'middleman3-sassc'
