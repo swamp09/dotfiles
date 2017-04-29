@@ -1,5 +1,5 @@
 [ghq]
-	root = /Users/numata/git
+	root = ~/git
 
 [core]
 	excludesfile = ~/.gitignore
@@ -7,8 +7,24 @@
 	name = swamp09
 	email = shu.numata@esm.co.jp
 [alias]
+	l = log --decorate
+	lr = log --reverse --decorate
+	lp = log -p --stat --decorate
+	ds = diff --staged
 	co = checkout
 	br = branch
-	ci = commit
+	ci = commit -v
 	st = status
 	unstage = reset HEAD --
+	rh = reset HEAD^
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[diff]
+	indentHeuristic = true
+[pull]
+  rebase = true
+[rebase]
+	autostash = true

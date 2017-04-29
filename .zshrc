@@ -41,3 +41,12 @@ bindkey '^r' peco-select-history
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+alias be='bundle exec'
+alias bi='bundle install'
+alias bo='bundle open'
+alias bu='bundle update'
+
+alias g='git'
+
+bundle exec rspec --color --format d
