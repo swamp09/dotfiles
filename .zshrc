@@ -49,4 +49,13 @@ alias bu='bundle update'
 
 alias g='git'
 
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias mkdir='mkdir -p'
+
 bundle exec rspec --color --format d
+
+# ディレクトリ名だけでcdする
+setopt auto_cd
