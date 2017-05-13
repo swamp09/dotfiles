@@ -60,67 +60,101 @@ bundle exec rspec --color --format d
 # ディレクトリ名だけでcdする
 setopt auto_cd
 
-source ~/.zplug/zplug
+source ~/.zplug/init.zsh
 
-# 「ユーザ名/リポジトリ名」で記述し、ダブルクォートで見やすく括る（括らなくてもいい）
-zplug "zsh-users/zsh-syntax-highlighting"
+# Make sure to use double quotes
 zplug "zsh-users/zsh-history-substring-search"
 
-# junegunn/dotfiles にある bin の中の vimcat をコマンドとして管理する
-zplug "junegunn/dotfiles", as:command, of:bin/vimcat
+# Use the package as a command
+# And accept glob patterns (e.g., brace, wildcard, ...)
+zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
 
-# tcnksm/docker-alias にある zshrc をプラグインとして管理する
-# as: のデフォルトは plugin なので省力もできる
-zplug "tcnksm/docker-alias", of:zshrc, as:plugin
+# Can manage everything e.g., other person's zshrc
+zplug "tcnksm/docker-alias", use:zshrc
 
-# frozen: を指定すると全体アップデートのときアップデートしなくなる（デフォルトは0）
+# Disable updates using the "frozen" tag
 zplug "k4rthik/git-cal", as:command, frozen:1
 
-# from: で特殊ケースを扱える
-# gh-r を指定すると GitHub Releases から取ってくる
-# of: で amd64 とかするとそれを持ってくる（指定しないかぎりOSにあったものを自動で選ぶ）
-# コマンド化するときに file: でリネームできる（この例では fzf-bin を fzf にしてる）
+# Grab binaries from GitHub Releases
+# and rename with the "rename-to:" tag
 zplug "junegunn/fzf-bin", \
-    as:command, \
     from:gh-r, \
-    file:fzf
+    as:command, \
+    rename-to:fzf, \
+    use:"*darwin*amd64*"
 
-# from: では gh-r の他に oh-my-zsh と gist が使える
-# oh-my-zsh を指定すると oh-my-zsh のリポジトリにある plugin/ 以下を
-# コマンド／プラグインとして管理することができる
-zplug "plugins/git", from:oh-my-zsh
+# Supports oh-my-zsh plugins and the like
+zplug "plugins/git",   from:oh-my-zsh
 
-# ビルド用 hook になっていて、この例ではクローン成功時に make install する
-# シェルコマンドなら何でも受け付けるので "echo OK" などでも可
-zplug "tj/n", do:"make install"
+# Also prezto
+zplug "modules/prompt", from:prezto
 
-# ブランチロック・リビジョンロック
-# at: はブランチとタグをサポートしている
+# Load if "if" tag returns true
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+
+# Run a command after a plugin is installed/updated
+# Provided, it requires to set the variable like the following:
+# ZPLUG_SUDO_PASSWORD="********"
+zplug "jhawthorn/fzy", \
+    as:command, \
+    rename-to:fzy, \
+    hook-build:"make && sudo make install"
+
+# Supports checking out a specific branch/tag/commit
 zplug "b4b4r07/enhancd", at:v1
-zplug "mollifier/anyframe", commit:4c23cb60
+zplug "mollifier/anyframe", at:4c23cb60
 
-# if: を指定すると真のときのみロードを行う（クローンはする）
-zplug "hchbaw/opp.zsh", if:"(( ${ZSH_VERSION%%.*} < 5 ))"
-
-# from: では gist を指定することができる
-# gist のときもリポジトリと同様にタグを使うことができる
+# Can manage gist file just like other packages
 zplug "b4b4r07/79ee61f7c140c63d2786", \
     from:gist, \
     as:command, \
-    of:get_last_pane_path.sh
+    use:get_last_pane_path.sh
 
-# パイプで依存関係を表現できる
-# 依存関係はパイプの流れのまま
-# この例では emoji-cli は jq に依存する
-zplug "stedolan/jq", \
+# Support bitbucket
+zplug "b4b4r07/hello_bitbucket", \
+    from:bitbucket, \
     as:command, \
-    file:jq, \
-    from:gh-r \
-    | zplug "b4b4r07/emoji-cli"
+    use:"*.sh"
 
-# check コマンドで未インストール項目があるかどうか verbose にチェックし
-# false のとき（つまり未インストール項目がある）y/N プロンプトで
-# インストールする
+# Rename a command with the string captured with `use` tag
+zplug "b4b4r07/httpstat", \
+    as:command, \
+    use:'(*).sh', \
+    rename-to:'$1'
+
+# Group dependencies
+# Load "emoji-cli" if "jq" is installed in this example
+zplug "stedolan/jq", \
+    from:gh-r, \
+    as:command, \
+    rename-to:jq
+zplug "b4b4r07/emoji-cli", \
+    on:"stedolan/jq"
+
+#enhancd,fzf,peco
+zplug "junegunn/fzf-bin", \
+    as:command, \
+    file:"fzf", \
+    from:gh-r, \
+    | zplug "b4b4r07/enhancd", of:enhancd.sh
+zplug "b4b4r07/enhancd", use:init.sh
+
+# Note: To specify the order in which packages should be loaded, use the defer
+#       tag described in the next section
+
+# Set the priority when loading
+# e.g., zsh-syntax-highlighting must be loaded
+# after executing compinit command and sourcing other plugins
+# (If the defer tag is given 2 or above, run after compinit command)
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# Can manage local plugins
+zplug "~/.zsh", from:local
+
+# Load theme file
+zplug 'dracula/zsh', as:theme
+
+# Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
@@ -128,5 +162,6 @@ if ! zplug check --verbose; then
     fi
 fi
 
-# プラグインを読み込み、コマンドにパスを通す
+# Then, source plugins and add commands to $PATH
 zplug load --verbose
+
