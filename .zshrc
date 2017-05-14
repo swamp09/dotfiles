@@ -154,6 +154,8 @@ zplug "~/.zsh", from:local
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
+zplug "mrowa44/emojify", as:command
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
