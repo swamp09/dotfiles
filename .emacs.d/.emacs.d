@@ -1,1 +1,0 @@
-/Users/numata/dotfiles/.emacs.d
