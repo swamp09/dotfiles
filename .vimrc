@@ -71,41 +71,41 @@ set nobackup
 set noswapfile
 
 " -------------------------------
-" NeoBundle
+" vim-plug
 " -------------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
+call plug#begin('~/.vim/plugged')
 
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+" Vundle/NeoBundle と同じように
+Plug 'junegunn/seoul256.vim'
 
-call neobundle#begin(expand('~/.vim/bundle'))
+" コマンド実行時に読み込む
+Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle'] }
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+" 指定したファイルタイプを開いたときに読み込む
+Plug 'tpope/vim-fireplace', { 'for': ['clojure'] }
+
+" X | Y の時, X をインストールした後に Y をインストール
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " コード補完
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'marcus/rsense'
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'marcus/rsense'
+Plug 'supermomonga/neocomplete-rsense.vim'
 
 " 静的解析
-NeoBundle 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " ドキュメント参照
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'yuku-t/vim-ref-ri'
+Plug 'thinca/vim-ref'
+Plug 'yuku-t/vim-ref-ri'
 
 " メソッド定義元へのジャンプ
-NeoBundle 'szw/vim-tags'
+Plug 'szw/vim-tags'
 
 " 自動で閉じる
-NeoBundle 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 
-call neobundle#end()
-
-NeoBundleCheck
+call plug#end()
 
 " -------------------------------
 " Rsense
