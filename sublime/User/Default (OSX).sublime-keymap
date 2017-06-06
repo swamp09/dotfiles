@@ -1,0 +1,7 @@
+[
+  { "keys": ["super+["], "command": "prev_view" },
+  { "keys": ["super+]"], "command": "next_view" },
+
+  { "keys": ["super+shift+]"], "command": "indent" },
+  { "keys": ["super+shift++["], "command": "unindent" },
+]

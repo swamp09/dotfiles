@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AutoFileName",
+		"BracketHighlighter",
+		"CTags",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"Material Theme",
+		"Package Control",
+		"RubyTest",
+		"SCSS",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
+		"Theme - Soda SolarizedDark",
+		"TrailingSpaces"
+	]
+}
