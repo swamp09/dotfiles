@@ -40,12 +40,15 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+
 eval "$(rbenv init -)"
 
-alias be='bundle exec'
+alias b='bundle exec'
 alias bi='bundle install'
 alias bo='bundle open'
 alias bu='bundle update'
+alias br='bundle exec rspec'
+
 
 alias g='git'
 
@@ -54,6 +57,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias mkdir='mkdir -p'
+
+alias e='emacs'
+alias v='vim'
 
 bundle exec rspec --color --format d
 
