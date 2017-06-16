@@ -41,6 +41,8 @@ bindkey '^r' peco-select-history
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
 eval "$(rbenv init -)"
 
 alias b='bundle exec'
