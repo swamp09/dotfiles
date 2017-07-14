@@ -177,3 +177,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
+
+# added by travis gem
+[ -f /Users/numata/.travis/travis.sh ] && source /Users/numata/.travis/travis.sh
