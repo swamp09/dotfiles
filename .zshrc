@@ -56,6 +56,8 @@ alias br='bundle exec rspec'
 
 alias g='git'
 
+alias gg = 'ghq get'
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -180,3 +182,10 @@ zplug load --verbose
 
 # added by travis gem
 [ -f /Users/numata/.travis/travis.sh ] && source /Users/numata/.travis/travis.sh
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/numata/python/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/numata/python/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/numata/python/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/numata/python/google-cloud-sdk/completion.zsh.inc'; fi
