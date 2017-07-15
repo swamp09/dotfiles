@@ -11,10 +11,13 @@
 	l = log --decorate
 	lr = log --reverse --decorate
 	lp = log -p --stat --decorate
+	ad = add
+	b = branch -a
 	ds = diff --staged
 	co = checkout
 	br = branch
 	ci = commit -v
+	ca = commit -v --amend
 	st = status
 	unstage = reset HEAD --
 	rh = reset HEAD^
