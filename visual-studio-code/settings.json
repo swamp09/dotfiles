@@ -1,0 +1,26 @@
+{
+    "editor.tabSize": 2,
+    "files.autoSave": "afterDelay",
+
+    // エディターでインデントのガイドを表示する必要があるかどうかを制御します
+    "editor.renderIndentGuides": true,
+
+    "editor.rulers": [80, 100],
+
+    "files.insertFinalNewline": true,
+
+    "workbench.iconTheme": "vscode-icons",
+
+    // Set individual ruby linters to use
+    "ruby.lint": {
+        "rubocop": true
+    },
+
+    "editor.renderWhitespace": "all",
+
+    "editor.autoClosingBrackets" : false,
+
+    "workbench.colorTheme": "Monokai Dimmed",
+    "window.zoomLevel": 0,
+    "workbench.welcome.enabled": false
+}
