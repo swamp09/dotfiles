@@ -67,6 +67,8 @@ alias mkdir='mkdir -p'
 alias e='emacs'
 alias v='vim'
 
+alias rwbr='RUBYOPT=-w bundle exec rake'
+
 bundle exec rspec --color --format d
 
 # ディレクトリ名だけでcdする
