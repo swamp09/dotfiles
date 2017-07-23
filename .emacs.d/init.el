@@ -1,3 +1,15 @@
+;;Caskの初期化
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(require 'cask)
+
+(cask-initialize)
+
 ;; 対応する括弧を表示する
 (show-paren-mode t)
 
@@ -104,3 +116,6 @@
 (autoload 'flycheck-mode "flycheck")
 (add-hook 'ruby-mode-hook 'flycheck-mode)
 (setq flycheck-check-syntax-automatically '(idle-change mode-enabled new-line save))
+
+;;color-theme
+(load-theme 'misterioso t)

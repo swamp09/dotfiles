@@ -2,6 +2,7 @@
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"

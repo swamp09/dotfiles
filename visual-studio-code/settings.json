@@ -33,5 +33,9 @@
 
     "editor.tabCompletion": true,
 
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.universalSelector": "warning",
+    "css.lint.zeroUnits": "warning"
 }
