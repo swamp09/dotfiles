@@ -37,5 +37,9 @@
 
     "css.lint.duplicateProperties": "warning",
     "css.lint.universalSelector": "warning",
-    "css.lint.zeroUnits": "warning"
+    "css.lint.zeroUnits": "warning",
+
+    "scss.lint.boxModel": "warning",
+    "scss.lint.universalSelector": "warning",
+    "scss.lint.zeroUnits": "warning"
 }
