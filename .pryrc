@@ -26,3 +26,10 @@ version << "\001\e[0m\002"
 
 "#{version} #{Pry.config.prompt_name}(#{Pry.view_clip(obj)})> "
 end
+
+begin
+  require "awesome_print"
+  Pry.config.print = proc { |output, value| output.puts value.ai }
+rescue LoadError
+  puts "no awesome_print :("
+end
