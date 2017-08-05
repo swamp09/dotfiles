@@ -31,5 +31,7 @@
 	indentHeuristic = true
 [pull]
   rebase = true
+[push]
+  default = current
 [rebase]
 	autostash = true
