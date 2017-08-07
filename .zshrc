@@ -80,6 +80,8 @@ alias v='vim'
 
 alias rwbr='RUBYOPT=-w bundle exec rake'
 
+alias ..="cd .."
+
 bundle exec rspec --color --format d
 
 # ディレクトリ名だけでcdする
