@@ -8,6 +8,7 @@
 	name = swamp09
 	email = shu.numata@esm.co.jp
 [alias]
+	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 	l = log --decorate
 	lr = log --reverse --decorate
 	lp = log -p --stat --decorate
@@ -23,7 +24,7 @@
 	unstage = reset HEAD --
 	rh = reset HEAD^
 	fp = push -f
-	rs = reset --soft HEAD~
+	rs = reset --soft
 [color]
 	status = auto
 	diff = auto
