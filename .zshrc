@@ -78,6 +78,7 @@ alias mkdir='mkdir -p'
 alias e='emacs'
 alias v='vim'
 
+alias r='rails'
 alias rwbr='RUBYOPT=-w bundle exec rake'
 
 alias ..="cd .."
