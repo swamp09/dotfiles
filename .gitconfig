@@ -25,6 +25,7 @@
 	rh = reset HEAD^
 	fp = push -f
 	rs = reset --soft
+	pom = pull origin master
 [color]
 	status = auto
 	diff = auto
