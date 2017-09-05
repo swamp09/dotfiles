@@ -26,6 +26,7 @@
 	fp = push -f
 	rs = reset --soft
 	pom = pull origin master
+	remote = remote -v
 [color]
 	status = auto
 	diff = auto
