@@ -26,8 +26,9 @@
 	fp = push -f
 	rs = reset --soft
 	pom = pull origin master
-	remote = remote -v
+	re = remote -v
 	graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	
 [color]
 	status = auto
 	diff = auto
