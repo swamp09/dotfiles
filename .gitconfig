@@ -24,14 +24,15 @@
 	ca = commit -v --amend
 	st = status
 	unstage = reset HEAD --
-	rh = reset HEAD^
-	fp = push -f
 	rs = reset --soft
+	rh = reset --hard
+	fp = push -f
 	pom = pull origin master
 	re = remote -v
 	graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	 cp = cherry-pick
-	 rv = rebase -i
+	cp = cherry-pick
+	rv = rebase -i
+	com = checkout master
 [color]
 	status = auto
 	diff = auto
