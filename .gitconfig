@@ -13,6 +13,7 @@
 	lr = log --reverse --decorate
 	lp = log -p --stat --decorate
 	ad = add
+	t = tag -l
 	b = branch -a
 	dm = diff master
 	dw = diff --color-words
