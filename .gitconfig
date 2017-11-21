@@ -34,7 +34,7 @@
 	re = remote -v
 	graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	cp = cherry-pick
-	rv = rebase -i
+	rb = rebase -i
 	com = checkout master
 [color]
 	status = auto
