@@ -22,10 +22,12 @@
 	co = checkout
 	br = branch
 	brd = branch -D
+	rename-branch = branch -m
 	ci = commit -v
 	ca = commit -v --amend
 	st = status
 	unstage = reset HEAD --
+	uncommit = reset --soft HEAD~
 	rs = reset --soft
 	rh = reset --hard
 	fp = push -f
