@@ -41,5 +41,9 @@
 
     "scss.lint.boxModel": "warning",
     "scss.lint.universalSelector": "warning",
-    "scss.lint.zeroUnits": "warning"
+    "scss.lint.zeroUnits": "warning",
+
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+
+    "files.autoGuessEncoding": true
 }
