@@ -86,6 +86,8 @@ alias ..="cd .."
 
 bundle exec rspec --color --format d
 
+# ビープ音を鳴らさないようにする
+setopt no_beep
 # ディレクトリ名だけでcdする
 setopt auto_cd
 
