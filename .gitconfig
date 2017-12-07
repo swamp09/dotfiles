@@ -30,6 +30,7 @@
 	uncommit = reset --soft HEAD~
 	rs = reset --soft
 	rh = reset --hard
+	f = fetch --prune
 	fp = push -f
 	pom = pull origin master
 	pum = pull upstream master
