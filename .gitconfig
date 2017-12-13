@@ -28,6 +28,7 @@
 	st = status
 	unstage = reset HEAD --
 	uncommit = reset --soft HEAD~
+	uc = reset --soft HEAD~
 	rs = reset --soft
 	rh = reset --hard
 	f = fetch --prune
