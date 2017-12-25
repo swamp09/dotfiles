@@ -1,3 +1,6 @@
+# Create an alias for a quick exit
+alias q exit
+
 # Auto-complete for method names and such
 require 'irb/completion'
 
@@ -8,10 +11,18 @@ AwesomePrint.irb!
 # Loads simple IRB (without RVM notice)
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-
-IRB.conf[:AUTO_INDENT] = true
-
 # A method for clearing the screen
 def clear
   system('clear')
 end
+
+# readline
+require 'readline'
+IRB.conf[:USE_READLINE] = true
+
+# indent
+IRB.conf[:AUTO_INDENT] = true
+
+# colorize
+require 'wirb'
+Wirb.start
