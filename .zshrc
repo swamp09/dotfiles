@@ -58,12 +58,11 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 eval "$(rbenv init -)"
 
-alias b='bundle exec'
+alias be='bundle exec'
 alias bi='bundle install'
 alias bo='bundle open'
 alias bu='bundle update'
 alias br='bundle exec rspec'
-
 
 alias g='git'
 alias gst='git status -s -b'
@@ -73,6 +72,7 @@ alias gg = 'ghq get'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias ls='ls -G'
 
 alias mkdir='mkdir -p'
 
