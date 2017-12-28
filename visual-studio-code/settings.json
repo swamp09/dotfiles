@@ -13,7 +13,8 @@
 
     // Set individual ruby linters to use
     "ruby.lint": {
-        "rubocop": true
+        "rubocop": true,
+        "ruby": true //Runs ruby -wc
     },
 
     "editor.renderWhitespace": "all",
@@ -45,5 +46,6 @@
 
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
 
-    "files.autoGuessEncoding": true
+    "files.autoGuessEncoding": true,
+    "powermode.enabled": false
 }
