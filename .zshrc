@@ -69,6 +69,8 @@ alias gst='git status -s -b'
 
 alias gg = 'ghq get'
 
+alias gi = 'gem install'
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
