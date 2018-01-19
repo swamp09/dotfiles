@@ -20,7 +20,7 @@
 	dw = diff --color-words
 	ds = diff --staged
 	co = checkout
-	br = branch
+	br = branch --sort=authordate
 	brd = branch -D
 	rename-branch = branch -m
 	ci = commit -v
@@ -40,6 +40,7 @@
 	graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	cp = cherry-pick
 	rb = rebase -i
+	rbc= rebase --continue
 	com = checkout master
 [color]
 	status = auto
