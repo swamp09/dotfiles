@@ -42,6 +42,7 @@
 	rb = rebase -i
 	rbc= rebase --continue
 	com = checkout master
+	one = log --oneline
 [color]
 	status = auto
 	diff = auto
