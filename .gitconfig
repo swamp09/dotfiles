@@ -9,40 +9,40 @@
 	email = shu.numata@esm.co.jp
 [alias]
 	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
-	l = log --decorate
-	lr = log --reverse --decorate
-	lp = log -p --stat --decorate
 	ad = add
 	ap = add -p
-	t = tag -l
 	b = branch -a
-	dm = diff master
-	dw = diff --color-words
-	ds = diff --staged
-	co = checkout
 	br = branch --sort=authordate
 	brd = branch -D
 	rename-branch = branch -m
 	ci = commit -v
 	ca = commit -v --amend
-	st = status
+	co = checkout
+	com = checkout master
+	cp = cherry-pick
+	dm = diff master
+	dw = diff --color-words
+	ds = diff --staged
+	f = fetch --prune
+	fp = push -f
+	l = log --decorate
+	lr = log --reverse --decorate
+	lp = log -p --stat --decorate
+	one = log --oneline
+	graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	pom = pull origin master
+	pum = pull upstream master
 	unstage = reset HEAD --
 	uncommit = reset --soft HEAD~
 	uc = reset --soft HEAD~
 	rs = reset --soft
 	rh = reset --hard
-	f = fetch --prune
-	fp = push -f
-	pom = pull origin master
-	pum = pull upstream master
 	re = remote -v
 	add-upstream = remote add upstream
-	graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	cp = cherry-pick
 	rb = rebase -i
 	rbc= rebase --continue
-	com = checkout master
-	one = log --oneline
+	st = status
+	t = tag -l
 [color]
 	status = auto
 	diff = auto
