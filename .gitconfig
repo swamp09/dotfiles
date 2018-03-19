@@ -24,6 +24,8 @@
 	dw = diff --color-words
 	ds = diff --staged
 	f = fetch --prune
+	get = !ghq get -p
+	list = !ghq list
 	fp = push -f
 	l = log --decorate
 	lr = log --reverse --decorate

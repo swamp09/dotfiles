@@ -67,8 +67,6 @@ alias br='bundle exec rspec'
 alias g='git'
 alias gst='git status -s -b'
 
-alias gg = 'ghq get'
-
 alias gi = 'gem install'
 
 alias rm='rm -i'
