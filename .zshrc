@@ -64,6 +64,9 @@ alias bo='bundle open'
 alias bu='bundle update'
 alias br='bundle exec rspec'
 
+alias du='docker-compose up'
+alias de='docker-compose exec'
+
 alias g='git'
 alias gst='git status -s -b'
 
