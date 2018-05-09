@@ -58,11 +58,14 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 eval "$(rbenv init -)"
 
+alias bt='bin/rails test'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bo='bundle open'
 alias bu='bundle update'
 alias br='bundle exec rspec'
+
+alias ci='curl -I'
 
 alias du='docker-compose up'
 alias de='docker-compose exec'
