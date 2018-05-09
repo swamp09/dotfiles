@@ -97,6 +97,8 @@ setopt no_beep
 # ディレクトリ名だけでcdする
 setopt auto_cd
 
+setopt nonomatch
+
 source ~/.zplug/init.zsh
 
 # Make sure to use double quotes
