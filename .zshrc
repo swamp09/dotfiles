@@ -8,17 +8,6 @@
 PROMPT='[%@%F{blue}%U%m%u%f]# '
 RPROMPT='[%F{green}%d%f]'
 
-#git branch
-autoload -Uz vcs_info
-setopt prompt_subst
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () { vcs_info }
-RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
-
 # completion
 autoload -U compinit
 compinit
@@ -27,8 +16,8 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # history
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=10000000
+SAVEHIST=10000000
 setopt hist_ignore_dups
 setopt share_history
 setopt auto_pushd
@@ -73,7 +62,8 @@ alias de='docker-compose exec'
 alias g='git'
 alias gst='git status -s -b'
 
-alias gi = 'gem install'
+alias r='rails'
+alias o='open'
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -89,8 +79,6 @@ alias r='rails'
 alias rwbr='RUBYOPT=-w bundle exec rake'
 
 alias ..="cd .."
-
-bundle exec rspec --color --format d
 
 # ビープ音を鳴らさないようにする
 setopt no_beep
@@ -140,7 +128,6 @@ zplug "jhawthorn/fzy", \
     hook-build:"make && sudo make install"
 
 # Supports checking out a specific branch/tag/commit
-zplug "b4b4r07/enhancd", at:v1
 zplug "mollifier/anyframe", at:4c23cb60
 
 # Can manage gist file just like other packages
@@ -167,15 +154,10 @@ zplug "stedolan/jq", \
     from:gh-r, \
     as:command, \
     rename-to:jq
-zplug "b4b4r07/emoji-cli", \
-    on:"stedolan/jq"
 
-#enhancd,fzf,peco
-zplug "junegunn/fzf-bin", \
-    as:command, \
-    file:"fzf", \
-    from:gh-r, \
-    | zplug "b4b4r07/enhancd", of:enhancd.sh
+zplug "b4b4r07/emoji-cli"
+
+#enhancd
 zplug "b4b4r07/enhancd", use:init.sh
 
 # Note: To specify the order in which packages should be loaded, use the defer
@@ -186,9 +168,6 @@ zplug "b4b4r07/enhancd", use:init.sh
 # after executing compinit command and sourcing other plugins
 # (If the defer tag is given 2 or above, run after compinit command)
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
-# Can manage local plugins
-zplug "~/.zsh", from:local
 
 # Load theme file
 zplug 'dracula/zsh', as:theme
@@ -219,3 +198,13 @@ if [ -f '/Users/numata/python/google-cloud-sdk/completion.zsh.inc' ]; then sourc
 
 # direnv setting
 eval "$(direnv hook zsh)"
+
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
