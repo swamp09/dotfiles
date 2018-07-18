@@ -49,3 +49,5 @@ bower.json
 .ruby-version
 
 .envrc
+
+/.vs
