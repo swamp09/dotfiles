@@ -17,6 +17,7 @@
 	rename-branch = branch -m
 	ci = commit -v
 	ca = commit -v --amend
+	cn = commit -v --amend --no-edit
 	co = checkout
 	com = checkout master
 	cp = cherry-pick
