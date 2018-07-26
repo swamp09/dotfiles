@@ -45,6 +45,7 @@
 	rb = rebase -i
 	rbc= rebase --continue
 	st = status
+	set-origin = remote set-url origin
 	t = tag -l
 [color]
 	status = auto
