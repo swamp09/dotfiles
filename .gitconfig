@@ -19,6 +19,8 @@
 	ca = commit -v --amend
 	cn = commit -v --amend --no-edit
 	co = checkout
+	cob = checkout -b
+	co-my-branch = "!bt() { git checkout -b swamp09/$1;}; bt"
 	com = checkout master
 	cp = cherry-pick
 	dm = diff master
