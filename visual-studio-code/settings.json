@@ -19,10 +19,8 @@
 
     "editor.renderWhitespace": "all",
 
-    "editor.autoClosingBrackets" : false,
-
-    "workbench.colorTheme": "Monokai Dimmed",
-    "window.zoomLevel": 0,
+    "editor.autoClosingBrackets": false,
+    "window.zoomLevel": 1,
     "workbench.welcome.enabled": false,
 
     "editor.quickSuggestions": {
@@ -47,5 +45,114 @@
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
 
     "files.autoGuessEncoding": true,
-    "powermode.enabled": false
+    "powermode.enabled": false,
+    "git.enableSmartCommit": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.statusBar.feedback.visible": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "terminal.integrated.rendererType": "dom",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "vscode-journal-view.expanded": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "text.html.markdown.journal.task.open.bullet",
+                "settings": {
+                    "foreground": "#FFFF00"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.task.open.marker",
+                "settings": {
+                    "foreground": "#FFFF00"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.task.open.keyword",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.task.open.text",
+                "settings": {}
+            },
+            {
+                "scope": "text.html.markdown.journal.task.completed.keyword",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.task.completed.marker",
+                "settings": {
+                    "foreground": "#AAAAAA"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.task.completed.text",
+                "settings": {
+                    "foreground": "#AAAAAA"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.task.completed.bullet",
+                "settings": {
+                    "foreground": "#FFFF00"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.memo.keyword",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.memo.bullet",
+                "settings": {
+                    "foreground": "#FFFF00"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.scope",
+                "settings": {
+                    "foreground": "#FFFF00"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.link.keyword",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "text.html.markdown.journal.link.bullet",
+                "settings": {
+                    "foreground": "#FFFF00"
+                }
+            }
+        ]
+    },
+    "github.hosts": [
+        {
+            "host": "https://github.com",
+            "username": "oauth",
+            "token": "system"
+        }
+    ],
+    "vsicons.projectDetection.autoReload": true,
+    "breadcrumbs.enabled": true
 }
