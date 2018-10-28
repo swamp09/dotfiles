@@ -56,6 +56,7 @@ alias br='bundle exec rspec'
 
 alias ci='curl -I'
 
+alias db='docker-compose build'
 alias du='docker-compose up'
 alias de='docker-compose exec'
 
@@ -185,10 +186,8 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
-
 # added by travis gem
 [ -f /Users/numata/.travis/travis.sh ] && source /Users/numata/.travis/travis.sh
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/numata/python/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/numata/python/google-cloud-sdk/path.zsh.inc'; fi
