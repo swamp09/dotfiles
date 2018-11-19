@@ -194,9 +194,6 @@ if [ -f '/Users/numata/python/google-cloud-sdk/path.zsh.inc' ]; then source '/Us
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/numata/python/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/numata/python/google-cloud-sdk/completion.zsh.inc'; fi
 
-# direnv setting
-eval "$(direnv hook zsh)"
-
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
