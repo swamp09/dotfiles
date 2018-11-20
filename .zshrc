@@ -2,11 +2,6 @@
 # ~/.zshrc
 #
 
-# prompt
-#autoload -U colors
-#colors
-PROMPT='[%@%F{blue}%U%m%u%f]# '
-RPROMPT='[%F{green}%d%f]'
 
 # completion
 autoload -U compinit
@@ -194,6 +189,9 @@ if [ -f '/Users/numata/python/google-cloud-sdk/path.zsh.inc' ]; then source '/Us
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/numata/python/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/numata/python/google-cloud-sdk/completion.zsh.inc'; fi
 
+#prompt
+#autoload -U colors
+#colors
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
@@ -202,4 +200,5 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
+RPROMPT='[%F{green}%d%f]'
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
