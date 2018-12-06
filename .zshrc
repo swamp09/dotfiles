@@ -53,6 +53,7 @@ alias ci='curl -I'
 alias db='docker-compose build'
 alias du='docker-compose up'
 alias de='docker-compose exec'
+alias dr='docker-compose run --rm'
 
 alias g='git'
 alias gst='git status -s -b'
