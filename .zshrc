@@ -54,6 +54,7 @@ alias db='docker-compose build'
 alias du='docker-compose up'
 alias de='docker-compose exec'
 alias dr='docker-compose run --rm'
+alias drmpid = 'docker-compose run --rm rm tmp/pids/server.pid'
 
 alias g='git'
 alias gst='git status -s -b'
