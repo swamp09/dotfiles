@@ -52,3 +52,5 @@ bower.json
 
 /.vs
 /.vscode
+
+*node_modules/
