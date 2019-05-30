@@ -7,3 +7,4 @@ ln -s ~/dotfiles/.emacs.d ~/.emacs.d
 ln -s ~/dotfiles/.pryrc ~/.pryrc
 ln -s ~/dotfiles/.irbrc ~/.irbrc
 ln -s ~/dotfiles/.gemrc ~/.gemrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
