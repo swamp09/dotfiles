@@ -71,5 +71,4 @@
       "command": "workbench.action.terminal.kill",
       "when": "terminalFocus"
     }
-  ]
-  
+]
