@@ -1,31 +1,75 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+// 既定値を上書きするには、このファイル内にキー バインドを挿入しますauto[]
 [
     {
-        "key": "ctrl+;",            "command": "workbench.action.terminal.focus",
-                                    "when": "editorTextFocus"
+      "key": "ctrl+;",
+      "command": "workbench.action.terminal.focus",
+      "when": "textInputFocus"
     },
     {
-        "key": "ctrl+;",            "command": "workbench.action.focusFirstEditorGroup",
-                                    "when": "terminalFocus"
+      "key": "ctrl+'",
+      "command": "workbench.action.focusSideBar"
     },
     {
-        "key": "cmd+y",
-        "command": "redo",
-        "when": "editorTextFocus && !editorReadonly"
+      "key": "ctrl+;",
+      "command": "workbench.action.focusFirstEditorGroup",
+      "when": "terminalFocus"
     },
     {
-        "key": "shift+cmd+z",
-        "command": "-redo",
-        "when": "editorTextFocus && !editorReadonly"
+      "key": "ctrl+shift+g",
+      "command": "workbench.action.gotoLine"
     },
     {
-        "key": "ctrl+j",
-        "command": "extension.jumpy-word",
-        "when": "editorTextFocus"
+      "key": "ctrl+g",
+      "command": "-workbench.action.gotoLine"
     },
     {
-        "key": "Escape",
-        "command": "extension.jumpy-exit",
-        "when": "editorTextFocus && jumpy.isJumpyMode"
+      "key": "ctrl+g",
+      "command": "workbench.view.scm"
+    },
+    {
+      "key": "ctrl+shift+g",
+      "command": "-workbench.view.scm"
+    },
+    {
+      "key": "ctrl+e",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "-workbench.view.explorer"
+    },
+    {
+      "key": "ctrl+l",
+      "command": "expandLineSelection",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+l",
+      "command": "-expandLineSelection",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+pagedown",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+pageup",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "workbench.action.terminal.new"
+    },
+    {
+      "key": "ctrl+shift+`",
+      "command": "-workbench.action.terminal.new"
+    },
+    {
+      "key": "ctrl+shift+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus"
     }
-]
+  ]
+  
