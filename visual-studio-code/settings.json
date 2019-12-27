@@ -9,8 +9,6 @@
 
     "files.insertFinalNewline": true,
 
-    "workbench.iconTheme": "vscode-icons",
-
     // Set individual ruby linters to use
     "ruby.lint": {
         "rubocop": true,
@@ -19,10 +17,8 @@
 
     "editor.renderWhitespace": "all",
 
-    "editor.autoClosingBrackets": false,
-    "window.zoomLevel": 1,
-    "workbench.welcome.enabled": false,
-
+    "editor.autoClosingBrackets": "always",
+    "window.zoomLevel": 2,
     "editor.quickSuggestions": {
         "other": true,
         "comments": true,
@@ -30,7 +26,7 @@
     },
     "editor.quickSuggestionsDelay": 1,
 
-    "editor.tabCompletion": true,
+    "editor.tabCompletion": "on",
 
     "editor.wordWrap": "on",
 
@@ -45,7 +41,9 @@
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
 
     "files.autoGuessEncoding": true,
-    "powermode.enabled": false,
+
+    "powermode.enabled": true,
+
     "git.enableSmartCommit": true,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
@@ -59,8 +57,6 @@
         "suppressWelcomeNotice": true
     },
     "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.statusBar.feedback.visible": false,
-    "vsicons.dontShowNewVersionMessage": true,
     "editor.minimap.enabled": false,
     "git.autofetch": true,
     "terminal.integrated.rendererType": "dom",
@@ -146,13 +142,22 @@
             }
         ]
     },
-    "github.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
-    "vsicons.projectDetection.autoReload": true,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "terminal.integrated.scrollback": 100000,
+    "ruby.intellisense": "rubyLocate",
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": false,
+    "editor.largeFileOptimizations": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "vsicons.dontShowNewVersionMessage": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "ruby.format": "rubocop",
+    "ruby.useLanguageServer": true,
+    "powermode.backgroundMode": "image",
+    "powermode.comboThreshold": 50,
+    "powermode.enableShake": false,
+    "powermode.presets": "exploding-rift",
+    "solargraph.autoformat": true,
+    "solargraph.diagnostics": true,
+    "solargraph.formatting": true
 }
