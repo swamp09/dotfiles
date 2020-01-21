@@ -2,7 +2,7 @@
 dotfiles
 `sh installer.sh`
 
-## todo list
+## usage
 - install zsh
 `sudo apt install zsh`
 - install rbenv
