@@ -12,7 +12,7 @@
 	ad = add
 	ap = add -p
 	b = branch -a
-	br = branch --sort=authordate
+	br = branch --sort=authordate -v
 	brd = branch -D
 	rename-branch = branch -m
 	ci = commit -v
