@@ -13,8 +13,8 @@ dotfiles
 `curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh`
 - install ghq
 `sudo apt-get install golang`
-`go get github.com/motemen/ghq`
-- intall peco
+`go get github.com/x-motemen/ghq`
+- install peco
 `go get github.com/peco/peco/cmd/peco`
 
 ### change default shell
