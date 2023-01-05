@@ -29,7 +29,7 @@
 	f = fetch --prune
 	get = !ghq get -p
 	list = !ghq list
-	fp = push -f
+	fp = push --force-with-lease
 	l = log --decorate
 	lr = log --reverse --decorate
 	lp = log -p --stat --decorate
@@ -47,7 +47,7 @@
 	rb = rebase -i
 	rbc= rebase --continue
 	st = status
-	set-origin = remote set-url origin
+	add-origin = remote add origin
 	t = tag -l
 [color]
 	status = auto
