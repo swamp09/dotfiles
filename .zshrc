@@ -13,7 +13,9 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 HISTFILE=~/.zsh_history
 HISTSIZE=10000000
 SAVEHIST=10000000
-setopt hist_ignore_dups
+setopt hist_ignore_dups # 前と重複する行は記録しない
+setopt hist_ignore_all_dups # 履歴中の重複行をファイル記録前に無くす
+setopt hist_find_no_dups # 履歴検索中の重複を飛ばす
 setopt share_history
 setopt auto_pushd
 setopt pushd_ignore_dups
@@ -111,19 +113,4 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT='[%F{green}%d%f]'
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/syu/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/syu/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/syu/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/syu/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
