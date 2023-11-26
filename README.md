@@ -12,10 +12,10 @@ dotfiles
 - install zplug
 `curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh`
 - install ghq
-`sudo apt-get install golang`
-`go get github.com/x-motemen/ghq`
+`sudo apt install golang-go`
+`go install github.com/x-motemen/ghq@latest`
 - install peco
-`go get github.com/peco/peco/cmd/peco`
+`go install github.com/peco/peco/cmd/peco@latest`
 
 ### change default shell
 
