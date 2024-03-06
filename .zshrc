@@ -114,3 +114,15 @@ precmd () { vcs_info }
 RPROMPT='[%F{green}%d%f]'
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
+# start ssh agent
+SSH_AGENT_FILE=$HOME/.ssh/ssh-agent
+test -f $SSH_AGENT_FILE && source $SSH_AGENT_FILE
+if ! ssh-add -l > /dev/null 2>&1; then
+  ssh-agent > $SSH_AGENT_FILE
+  source $SSH_AGENT_FILE
+  ssh-add $HOME/.ssh/swamp09
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
