@@ -39,6 +39,7 @@ bindkey '^r' peco-select-history
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.rye/shims:$PATH"
 
 export EDITOR=vim
 
