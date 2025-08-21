@@ -6,7 +6,7 @@ dotfiles
 - install zsh
 `sudo apt install zsh`
 - install rbenv
-`git clone https://github.com/rbenv/rbenv.git ~/.rbenv`
+`sudo apt install rbenv`
 - install ruby-build
 `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
 - install zplug
