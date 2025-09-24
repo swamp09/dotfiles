@@ -6,7 +6,7 @@
 	quotepath = false
 [user]
 	name = swamp09
-	email = shu.numata@esm.co.jp
+	email = swamp09.2100@gmail.com
 [alias]
 	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 	ad = add
